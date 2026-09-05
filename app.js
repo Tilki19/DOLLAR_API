@@ -21,28 +21,26 @@ function mostrarDivisas(lasDivisas) {
     for (const item of lasDivisas) {
         divisasUnicas.add(item.moneda)
     }*/
-    let lista = document.getElementById("lista")
-    let conversion = document.getElementById("conversion")
+    let lista = document.getElementById("lista");
+    let conversion = document.getElementById("conversion");
 
-    lista.innerHTML = lasDivisas.map(d => `<option value="${d.moneda}">${d.nombre}</option>`).join("")
-    conversion.innerHTML = lasDivisas.map(d => `<option value="${d.moneda}">${d.nombre}</option>`).join("")
-
+    lista.innerHTML = lasDivisas.map((d) => `<option value="${d.moneda}">${d.nombre}</option>`).join("");
+    conversion.innerHTML = lasDivisas.map((d) => `<option value="${d.moneda}">${d.nombre}</option>`).join("");
+    let paisDos = lasDivisas.ultimoCierre
     /*for (const d of lasDivisas) { 
         let lista = document.getElementById("lista");
         lista.innerHTML += `<option>${d.code}</option>`
     }*/
 }
-let valor = document.getElementById("valor")
+let numero = document.getElementById("numero");
 
-valor.addEventListener("keyup", ()=> {
-    // Tomar el valor del select conversion, y lo con 
-    valor.value
-})
-function calcularConversion(conversion){
+numero.addEventListener("keyup", () => {
+    let cantidad = Number(numero.value);
+    let paisUno = lasDivisas.ultimoCierre
+    console.log(paisUno)
     
 
-
-}
-
+});
+function calcularConversion(conversion) {}
 
 iniciador();
